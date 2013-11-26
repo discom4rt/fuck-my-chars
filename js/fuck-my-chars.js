@@ -1,4 +1,4 @@
-(function( $, window, document, undefined ) {
+(function( window, document, undefined ) {
 
 var FuckMyChars = function() {
   var FUCKED_CLASS = 'fucked',
@@ -189,4 +189,4 @@ var FuckMyChars = function() {
 
 window.FuckMyChars = new FuckMyChars();
 
-}( jQuery, window, document ));
+}( window, document ));
