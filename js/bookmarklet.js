@@ -14,12 +14,13 @@
 
     loading = true;
     ctag = document.createElement( 'link' );
-    ctag.setAttribute('rel', 'sylesheet');
     ctag.setAttribute('href', 'https://rawgithub.com/discom4rt/fuck-my-chars/master/css/fuck-my-chars.css');
+    ctag.setAttribute('rel', 'stylesheet');
+    ctag.setAttribute('type', 'text/css');
     ctag.onload = function() {
       loadScript();
     };
-    document.body.appendChild( ctag );
+    document.getElementsByTagName('head')[0].appendChild(ctag);
   } else {
     FuckMyChars.up();
   }
