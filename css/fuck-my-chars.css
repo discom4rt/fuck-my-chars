@@ -1,0 +1,44 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes pulsate {
+  0% { font-size: 100% }
+  50% { font-size: 200%; }
+  100% { font-size: 100%; }
+}
+
+@-moz-keyframes pulsate {
+  0% { font-size: 100% }
+  50% { font-size: 200%; }
+  100% { font-size: 100%; }
+}
+
+@-webkit-keyframes pulsate {
+  0% { font-size: 100% }
+  50% { font-size: 200%; }
+  100% { font-size: 100%; }
+}
