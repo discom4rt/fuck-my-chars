@@ -81,7 +81,6 @@ var FuckMyChars = function() {
 
     while( j-- ) {
       span = spans[j];
-      span.style.position = 'absolute';
       span.style.display = 'inline-block';
     }
 
