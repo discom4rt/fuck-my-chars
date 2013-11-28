@@ -155,9 +155,9 @@ var FuckMyChars = function() {
       bgColor = 'rgb('+ (Math.floor(Math.random() * 256)) + ','
                       + (Math.floor(Math.random() * 256)) + ','
                       + (Math.floor(Math.random() * 256)) + ')';
-      css['background-color'] = bgColor;
+      css['backgroundColor'] = bgColor;
     } else {
-      css['background-color'] = 'inherit';
+      css['backgroundColor'] = 'inherit';
     }
   };
 
@@ -165,12 +165,12 @@ var FuckMyChars = function() {
     var comma = css['animation'] && css['animation'].length > 0 && ',' || '';
 
     css['animation'] = (css['animation'] || '');
-    css['-moz-animation'] = (css['-moz-animation'] || '');
-    css['-webkit-animation'] = (css['-webkit-animation'] || '');
+    css['mozAnimation'] = (css['mozAnimation'] || '');
+    css['webkitAnimation'] = (css['webkitAnimation'] || '');
 
     css['animation'] += comma + name + ' ' + timing +'s infinite linear';
-    css['-moz-animation'] += comma + name + ' ' + timing +'s infinite linear';
-    css['-webkit-animation'] +=  comma + name + ' ' + timing +'s infinite linear';
+    css['mozAnimation'] += comma + name + ' ' + timing +'s infinite linear';
+    css['webkitAnimation'] +=  comma + name + ' ' + timing +'s infinite linear';
   };
 
   var removeAnimation = function( css, name ) {
@@ -181,8 +181,8 @@ var FuckMyChars = function() {
     }
 
     css['animation'] = css['animation'].replace(regex, '');
-    css['-moz-animation'] = css['animation'].replace(regex, '');
-    css['-webkit-animation'] = css['animation'].replace(regex, '');
+    css['mozAnimation'] = css['animation'].replace(regex, '');
+    css['webkitAnimation'] = css['animation'].replace(regex, '');
   };
 };
 
