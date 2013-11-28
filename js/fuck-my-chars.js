@@ -144,9 +144,9 @@ var FuckMyChars = function() {
   var applyRandomFontSize = function( css ) {
     if( getChance() ) {
       fontSize = Math.ceil(Math.random() * 3);
-      css['font-size'] = fontSize + 'em';
+      css['fontSize'] = fontSize + 'em';
     } else {
-      css['font-size'] = 'inherit';
+      css['fontSize'] = 'inherit';
     }
   };
 
