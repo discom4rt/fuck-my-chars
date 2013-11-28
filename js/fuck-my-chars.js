@@ -60,7 +60,7 @@ var FuckMyChars = function() {
         var tmpSpan = document.createElement('span');
         tmpSpan.className = FUCKED_CLASS;
         tmpSpan.setAttribute('style', 'display:inline;background:transparent;');
-        tmpSpan.innerText = match;
+        tmpSpan.innerHTML = match;
         tmpFrag.appendChild(tmpSpan);
       });
 
