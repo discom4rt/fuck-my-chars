@@ -102,6 +102,7 @@ var FuckMyChars = function() {
     applyRandomColor( css );
     applyRandomFontSize( css );
     applyRandomBackgroundColor( css );
+    applyRandomSkew( css );
 
     for( prop in css ) {
       element.style[prop] = css[prop];
@@ -161,6 +162,19 @@ var FuckMyChars = function() {
     }
   };
 
+  var applyRandomSkew = function( css ) {
+    var skewX,
+      skewY;
+
+    if( getChance() ) {
+      skewX = Math.random() * 100 - 50;
+      skewY = Math.random() * 100 - 50;
+      addTransform(css, skew, skewX + 'deg,' + skewY + 'deg');
+    } else {
+      removeTransform(css, 'skew');
+    }
+  };
+
   var addAnimation = function( css, name, timing ) {
     var comma = css['animation'] && css['animation'].length > 0 && ',' || '';
 
@@ -173,6 +187,18 @@ var FuckMyChars = function() {
     css['webkitAnimation'] +=  comma + name + ' ' + timing +'s infinite linear';
   };
 
+  var addTransform = function( css, name, value ) {
+    var space = css['transform'] && css['transform'].length > 0 && ' ' || '';
+
+    css['transform'] = (css['transform'] || '');
+    css['mozTransform'] = (css['mozTransform'] || '');
+    css['webkitTransform'] = (css['webkitTransform'] || '');
+
+    css['transform'] += space + name + '(' + value + ')';
+    css['mozTransform'] += space + name + '(' + value + ')';
+    css['webkitTransform'] +=  space + name + '(' + value + ')';
+  };
+
   var removeAnimation = function( css, name ) {
     var regex = new RegExp(name+'[^,]+(,|$)');
 
@@ -183,6 +209,18 @@ var FuckMyChars = function() {
     css['animation'] = css['animation'].replace(regex, '');
     css['mozAnimation'] = css['animation'].replace(regex, '');
     css['webkitAnimation'] = css['animation'].replace(regex, '');
+  };
+
+  var removeTransform = function( css, name ) {
+    var regex = new RegExp(name+'[^ ]+( |$)');
+
+    if( !css['transform'] ) {
+      return;
+    }
+
+    css['transform'] = css['transform'].replace(regex, '');
+    css['mozTransform'] = css['transform'].replace(regex, '');
+    css['webkitTransform'] = css['transform'].replace(regex, '');
   };
 };
 
