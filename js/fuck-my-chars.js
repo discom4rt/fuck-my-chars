@@ -169,7 +169,7 @@ var FuckMyChars = function() {
     if( getChance() ) {
       skewX = Math.random() * 100 - 50;
       skewY = Math.random() * 100 - 50;
-      addTransform(css, skew, skewX + 'deg,' + skewY + 'deg');
+      addTransform(css, 'skew', skewX + 'deg,' + skewY + 'deg');
     } else {
       removeTransform(css, 'skew');
     }
