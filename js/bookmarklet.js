@@ -14,7 +14,7 @@
 
     loading = true;
     ctag = document.createElement( 'link' );
-    ctag.setAttribute('href', 'https://rawgithub.com/discom4rt/fuck-my-chars/master/css/fuck-my-chars.css');
+    ctag.setAttribute('href', 'http://discom4rt.github.io/fuck-my-chars/css/fuck-my-chars.css');
     ctag.setAttribute('rel', 'stylesheet');
     ctag.setAttribute('type', 'text/css');
     ctag.onload = function() {
@@ -27,7 +27,7 @@
 
   function loadScript() {
     var stag = document.createElement( 'script' );
-    stag.setAttribute( 'src', 'https://rawgithub.com/discom4rt/fuck-my-chars/master/js/fuck-my-chars.js' );
+    stag.setAttribute( 'src', 'http://discom4rt.github.io/fuck-my-chars/js/fuck-my-chars.js' );
     stag.onload = function() {
       loading = false;
       FuckMyChars.up();
